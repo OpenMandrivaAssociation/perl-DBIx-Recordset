@@ -1,7 +1,7 @@
 %define module	DBIx-Recordset
 %define	name	perl-%{module}
 %define version 0.26
-%define release %mkrel 3
+%define release %mkrel 5
 
 Summary:	Perl extension for DBI recordsets
 Name:		%{name}
