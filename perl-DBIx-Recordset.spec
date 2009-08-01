@@ -1,23 +1,22 @@
-%define module	DBIx-Recordset
-%define	name	perl-%{module}
-%define version 0.26
-%define release %mkrel 5
+%define upstream_name	 DBIx-Recordset
+%define upstream_version 0.26
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl extension for DBI recordsets
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%release}-buildroot/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-DBI
-BuildRequires:	perl-devel
 BuildRequires:  perl-DBD-Pg
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%release}
 Requires:	perl-DBI perl
 Requires:	perl-base >= 2:5.8.7
-BuildArch:	noarch
 
 %description
 DBIx::Recordset is a perl module for abstraction and simplification of database
@@ -30,7 +29,7 @@ and to process the posted data of formfields, but DBIx::Recordset is not
 limited to web applications.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 chmod 644 Changes Recordset.pm
@@ -55,5 +54,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README TODO
 %{_mandir}/*/*
 %{perl_vendorlib}/DBIx
-
-
