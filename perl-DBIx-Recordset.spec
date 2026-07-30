@@ -2,7 +2,7 @@
 %define upstream_version 0.26
 Name:		perl-%{upstream_name}
 Version:	0.26
-Release:	2
+Release:	3
 
 Summary:	Perl extension for DBI recordsets
 License:	GPL+ or Artistic
@@ -28,7 +28,7 @@ and to process the posted data of formfields, but DBIx::Recordset is not
 limited to web applications.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n DBIx-Recordset-0.26
 
 %build
 chmod 644 Changes Recordset.pm
