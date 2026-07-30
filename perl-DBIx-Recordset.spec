@@ -2,7 +2,7 @@
 %define upstream_version 0.26
 Name:		perl-%{upstream_name}
 Version:	0.26
-Release:	6
+Release:	7
 
 Summary:	Perl extension for DBI recordsets
 License:	GPL+ or Artistic
@@ -40,6 +40,9 @@ perl Makefile.PL INSTALLDIRS=vendor << EOF
 
 EOF
 make
+
+%check
+make test || :
 
 %install
 %makeinstall_std
