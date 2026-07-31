@@ -2,7 +2,7 @@
 %define upstream_version 0.26
 Name:		perl-%{upstream_name}
 Version:	0.26
-Release:	42
+Release:	43
 
 Summary:	Perl extension for DBI recordsets
 License:	GPL+ or Artistic
