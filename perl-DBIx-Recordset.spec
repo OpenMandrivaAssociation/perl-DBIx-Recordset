@@ -2,7 +2,7 @@
 %define upstream_version 0.26
 Name:		perl-%{upstream_name}
 Version:	0.26
-Release:	1
+Release:	2
 
 Summary:	Perl extension for DBI recordsets
 License:	GPL+ or Artistic
@@ -13,7 +13,6 @@ Source0:	https://cpan.metacpan.org/authors/id/G/GR/GRICHTER/DBIx-Recordset-0.26.
 BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(DBI)
-BuildRequires:  perl(DBD::Pg)
 BuildArch:	noarch
 Requires:	perl(DBI)
 
